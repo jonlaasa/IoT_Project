@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Monitorización</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="panel-container">
+        <h1>Panel de Monitorización para el Paciente {{ paciente_id }}</h1>
+        <iframe 
+            src="http://192.168.56.1:3000/d-solo/ce48aw3c9su0wa/heart-rate?from=1732177220281&to=1732198820281&timezone=browser&var-patient_id={{ paciente_id }}&orgId=1&panelId=1&__feature.dashboardSceneSolo" 
+            width="450" 
+            height="200" 
+            frameborder="0">
+        </iframe>
+    </div>
+</body>
+</html>
