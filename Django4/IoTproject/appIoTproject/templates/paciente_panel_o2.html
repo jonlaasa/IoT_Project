@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O2 Monitorización</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="panel-container">
+        <h1>Monitorización O2 del Paciente {{ paciente_id }}</h1>
+        <div class="graphs-container">
+            <div class="graph">
+                <iframe 
+                    src="http://10.172.117.102:3000/d-solo/ee54v5sjsqtj4c/weekly-report?from=1732041911883&to=1732646711883&timezone=browser&var-patient_id={{ paciente_id }}&orgId=1&panelId=2&__feature.dashboardSceneSolo" 
+                    width="100%" 
+                    height="200" 
+                    frameborder="0">
+                </iframe>
+            </div>
+            <div class="graph">
+                <iframe 
+                    src="http://10.172.117.102:3000/d-solo/ce48aw3c9su0wa/daily-report?from=1732560741128&to=1732647141128&timezone=browser&var-patient_id={{ paciente_id }}&orgId=1&panelId=5&__feature.dashboardSceneSolo" 
+                    width="100%" 
+                    height="200" 
+                    frameborder="0">
+                </iframe>
+            </div>
+            <div class="graph">
+                <iframe 
+                    src="http://10.172.117.102:3000/d-solo/ce48aw3c9su0wa/daily-report?from=1732560741128&to=1732647141128&timezone=browser&var-patient_id={{ paciente_id }}&orgId=1&panelId=7&__feature.dashboardSceneSolo" 
+                    width="100%" 
+                    height="200" 
+                    frameborder="0">
+                </iframe>
+            </div>
+            <div class="graph">
+                <iframe 
+                    src="http://10.172.117.102:3000/d-solo/ce48aw3c9su0wa/daily-report?from=1732560741128&to=1732647141128&timezone=browser&var-patient_id=1&orgId=1&panelId=6&__feature.dashboardSceneSolo" 
+                    width="100%" 
+                    height="200" 
+                    frameborder="0">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
