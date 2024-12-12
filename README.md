@@ -58,8 +58,10 @@ To log in, each family member uses their USERNAME and PASSWORD. For example:
 Waits for alerts (when a measurement exceeds the threshold) to turn on the LED, indicating this situation.
 #### led.py:
 Contains code to connect an LED to the Raspberry Pi on the specified input, turn it on for a few seconds, and then turn it off (simulating the alert).
-#### heart02Patient.py:
+#### max30100.py and testMAX30100.py:
 Functions to measure heart rate and blood oxygen.
+#### heart02Patient.py:
+Functions to measure heart rate and blood oxygen (using function from the ones above).
 #### temperaturePatient.py: 
 Functions to measure the patient’s body temperature using a barometer.
 #### temperatureAmbient.py:
